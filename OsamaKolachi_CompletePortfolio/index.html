@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Osama Kolachi | Portfolio</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="style.css" />
+  <script defer src="script.js"></script>
+  <style>
+     .typewriter-wrapper {
+    display: inline-block;
+    overflow: hidden;
+    white-space: nowrap;
+    border-right: 2px solid #0be1af;
+    font-weight: bold;
+    animation: typing 4s steps(13, end), blink 0.7s step-end 6;
+    color: transparent;
+    background: linear-gradient(to right, #0be1af, #166c6f);
+    -webkit-background-clip: text;
+    background-clip: text;
+  }
+
+  @keyframes typing {
+    from { width: 0 }
+    to { width: 13ch }
+  }
+
+  @keyframes blink {
+    0%, 100% { border-color: transparent }
+    50% { border-color: #0be1af }
+  }
+
+  .typewriter-wrapper {
+    display: inline-block;
+    overflow: hidden;
+    white-space: nowrap;
+    border-right: 2px solid #0be1af;
+    animation:
+      typing 6s steps(30, end) infinite,
+      blink 0.8s step-end infinite;
+    color: transparent;
+    background: linear-gradient(to right, #0be1af, #166c6f);
+    -webkit-background-clip: text;
+    background-clip: text;
+  }
+
+    .gradient-text {
+      background: linear-gradient(to right, #0be1af, #166c6f);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+    .divider::before,
+    .divider::after {
+      content: '';
+      flex: 1;
+      height: 1px;
+      background: linear-gradient(to left, transparent 0%, #0be1af 50%, transparent 100%);
+    }
+    .divider::after {
+      background: linear-gradient(to right, transparent 0%, #0be1af 50%, transparent 100%);
+    }
+  </style>
+</head>
+<body class="bg-[#030c0e] text-white font-sans overflow-x-hidden">
+
+<!-- Navbar -->
+<!-- Responsive Navbar -->
+<nav class="fixed top-0 left-0 w-full z-50 bg-[#030c0e] border-b border-[#0be1af] shadow-md">
+  <div class="flex justify-between items-center px-6 py-4 md:px-10">
+    <div class="text-[#0be1af] text-xl font-bold">^/></div>
+
+    <!-- Hamburger Button -->
+    <button id="nav-toggle" class="md:hidden text-[#0be1af] focus:outline-none">
+      <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24"
+           xmlns="http://www.w3.org/2000/svg">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+              d="M4 6h16M4 12h16M4 18h16"></path>
+      </svg>
+    </button>
+
+    <!-- Desktop Menu -->
+    <ul class="hidden md:flex space-x-6 text-[#0be1af] font-semibold">
+      <li><a href="#intro">Home</a></li>
+      <li><a href="#about">About</a></li>
+      <li><a href="#skills">Skills</a></li>
+      <li><a href="#projects">Projects</a></li>
+      <li><a href="#hobbies">Hobbies</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+  </div>
+
+  <!-- Mobile Side Menu -->
+  <div id="nav-menu" class="fixed top-0 left-0 h-full w-64 bg-[#030c0e] text-[#0be1af] shadow-lg transform -translate-x-full transition-transform duration-300 z-50">
+    <div class="flex justify-between items-center p-4 border-b border-[#0be1af]">
+      <span class="text-xl font-bold">Menu</span>
+      <button id="nav-close" class="text-[#0be1af] focus:outline-none text-2xl">&times;</button>
+    </div>
+    <ul class="flex flex-col p-6 space-y-4 text-lg font-semibold">
+      <li><a href="#intro" onclick="closeNav()">Home</a></li>
+      <li><a href="#about" onclick="closeNav()">About</a></li>
+      <li><a href="#skills" onclick="closeNav()">Skills</a></li>
+      <li><a href="#projects" onclick="closeNav()">Projects</a></li>
+      <li><a href="#hobbies" onclick="closeNav()">Hobbies</a></li>
+      <li><a href="#contact" onclick="closeNav()">Contact</a></li>
+    </ul>
+  </div>
+</nav>
+
+
+<!-- INTRO -->
+<section id="intro" class="h-screen w-screen flex flex-col md:flex-row items-center justify-center px-10 pt-20">
+  <div class="text-center md:text-left max-w-xl">
+ <h1 class="text-4xl font-bold mb-4">
+  Hi, I'm <span class="typewriter-wrapper">Osama Kolachi</span>
+</h1>
+ <p class="mb-6">A passionate web developer and a UI UX designer always an eye for designs</p>
+    <a href="OsamaKolachiCV.pdf" class="inline-block border border-[#0be1af] px-5 py-2 rounded text-[#0be1af] mb-4">&lt; Download CV /&gt;</a><br>
+    <div class="flex justify-center md:justify-start gap-4 mt-2">
+      <a href="https://github.com/OsamaTASKIN" target="_blank"><img src="https://cdn-icons-png.flaticon.com/512/25/25231.png" class="w-10 h-10 rounded-full" alt="GitHub"></a>
+      <a href="https://www.linkedin.com/in/osama-kolachi/" target="_blank"><img src="https://cdn-icons-png.flaticon.com/512/174/174857.png" class="w-10 h-10 rounded-full" alt="LinkedIn"></a>
+    </div>
+  </div>
+  <img src="osama.jpeg" alt="Osama Kolachi" class="w-[300px] rounded shadow-lg mt-10 md:mt-0 md:ml-12" />
+</section>
+
+<div class="divider flex items-center justify-center my-4 px-10"></div>
+
+<!-- ABOUT -->
+<section id="about" class="h-screen w-screen relative flex items-center justify-center px-10 text-center overflow-hidden bg-[#030c0e]">
+
+  <!-- Big </> Background in Light Purple -->
+  <div class="absolute inset-0 flex items-center justify-center z-0 pointer-events-none">
+    <span class="text-[200px] md:text-[300px] font-bold text-purple-300 opacity-10 transform rotate-45 select-none">
+      &lt;/&gt;
+    </span>
+  </div>
+
+  <!-- Text Content -->
+  <blockquote class="text-lg italic text-gray-300 max-w-3xl z-10 relative">
+    “Hi Osama Kolachi here, a passionate web designer and developer from 
+    <span class='text-[#0be1af] font-semibold'>Pakistan</span>. 
+    A first class graduate from Middlesex University Dubai looking for a company who is passionate to hire passionate people who love design and growth and attention to detail.”
+  </blockquote>
+</section>
+
+
+<!-- SKILLS -->
+<section id="skills" class="h-screen w-screen px-10 py-20 text-center">
+  <h2 class="text-3xl font-bold mb-10">Skills</h2>
+  <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8 place-items-center">
+    <div class="group bg-[#030c0e] p-4 rounded-md border-2 border-transparent hover:border-[#0be1af] transition-all duration-300 shadow-md hover:shadow-[#0be1af]/50 w-60">
+      <div class="flex items-center gap-4 text-[#0be1af] font-medium text-lg">
+        <img src="https://cdn-icons-png.flaticon.com/512/732/732212.png" class="w-8" alt="HTML" /> HTML
+      </div>
+    </div>
+    <div class="group bg-[#030c0e] p-4 rounded-md border-2 border-transparent hover:border-[#0be1af] transition-all duration-300 shadow-md hover:shadow-[#0be1af]/50 w-60">
+      <div class="flex items-center gap-4 text-[#0be1af] font-medium text-lg">
+        <img src="https://cdn-icons-png.flaticon.com/512/732/732190.png" class="w-8" alt="CSS" /> CSS
+      </div>
+    </div>
+    <div class="group bg-[#030c0e] p-4 rounded-md border-2 border-transparent hover:border-[#0be1af] transition-all duration-300 shadow-md hover:shadow-[#0be1af]/50 w-60">
+      <div class="flex items-center gap-4 text-[#0be1af] font-medium text-lg">
+        <img src="https://getbootstrap.com/docs/5.0/assets/brand/bootstrap-logo-shadow.png" class="w-8" alt="Bootstrap" /> Bootstrap
+      </div>
+    </div>
+    <div class="group bg-[#030c0e] p-4 rounded-md border-2 border-transparent hover:border-[#0be1af] transition-all duration-300 shadow-md hover:shadow-[#0be1af]/50 w-60">
+      <div class="flex items-center gap-4 text-[#0be1af] font-medium text-lg">
+        <img src="https://tailwindcss.com/_next/static/media/tailwindcss-mark.6ea76c3f2b.svg" class="w-8" alt="Tailwind" /> Tailwind
+      </div>
+    </div>
+    <div class="group bg-[#030c0e] p-4 rounded-md border-2 border-transparent hover:border-[#0be1af] transition-all duration-300 shadow-md hover:shadow-[#0be1af]/50 w-60">
+      <div class="flex items-center gap-4 text-[#0be1af] font-medium text-lg">
+        <img src="https://cdn-icons-png.flaticon.com/512/5968/5968292.png" class="w-8" alt="JavaScript" /> JavaScript
+      </div>
+    </div>
+    <div class="group bg-[#030c0e] p-4 rounded-md border-2 border-transparent hover:border-[#0be1af] transition-all duration-300 shadow-md hover:shadow-[#0be1af]/50 w-60">
+      <div class="flex items-center gap-4 text-[#0be1af] font-medium text-lg">
+        <img src="https://cdn-icons-png.flaticon.com/512/906/906334.png" class="w-8" alt="UI" /> UI
+      </div>
+    </div>
+    <div class="group bg-[#030c0e] p-4 rounded-md border-2 border-transparent hover:border-[#0be1af] transition-all duration-300 shadow-md hover:shadow-[#0be1af]/50 w-60">
+      <div class="flex items-center gap-4 text-[#0be1af] font-medium text-lg">
+        <img src="https://cdn-icons-png.flaticon.com/512/3135/3135715.png" class="w-8" alt="UX" /> UX
+      </div>
+    </div>
+    <div class="group bg-[#030c0e] p-4 rounded-md border-2 border-transparent hover:border-[#0be1af] transition-all duration-300 shadow-md hover:shadow-[#0be1af]/50 w-60">
+      <div class="flex items-center gap-4 text-[#0be1af] font-medium text-lg">
+        <img src="https://cdn-icons-png.flaticon.com/512/5968/5968705.png" class="w-8" alt="Figma" /> Figma
+      </div>
+    </div>
+    <div class="group bg-[#030c0e] p-4 rounded-md border-2 border-transparent hover:border-[#0be1af] transition-all duration-300 shadow-md hover:shadow-[#0be1af]/50 w-60">
+      <div class="flex items-center gap-4 text-[#0be1af] font-medium text-lg">
+        <img src="https://cdn-icons-png.flaticon.com/512/732/732223.png" class="w-8" alt="Word" /> Word
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<div class="divider flex items-center justify-center my-4 px-10"></div>
+
+<!-- HOBBIES -->
+<section id="hobbies" class="h-[40vh] w-screen relative flex items-center justify-center text-center overflow-hidden bg-[#030c0e]">
+  <div class="absolute inset-0 flex items-center justify-between px-6">
+    <img src="luffy-removebg-preview.png" class="h-full max-h-[100%] object-contain opacity-20" alt="Luffy" />
+    <img src="ichigo-removebg-preview.png" class="h-full max-h-[100%] object-contain opacity-20" alt="Ichigo" />
+  </div>
+  <div class="z-10 relative">
+    <h2 class="text-3xl font-bold text-white">My hobbies</h2>
+    <p class="text-lg mt-2 text-gray-300">Well, anything design related and sports</p>
+  </div>
+</section>
+
+
+<!-- Add other sections like Projects, Contact here if needed -->
+
+</body>
+</html>
+
+<div class="divider flex items-center justify-center my-4 px-10"></div>
+
+<!-- PROJECTS -->
+<section id="projects" class="h-screen w-screen px-10 py-20 text-center overflow-y-auto">
+  <h2 class="text-3xl font-bold mb-10 text-white">Projects</h2>
+  <div class="grid md:grid-cols-2 gap-10 place-items-center">
+    
+    <!-- Project Card 1 -->
+    <a href="https://osamataskin.github.io/Frontend/" target="_blank"
+       class="group bg-[#0a1c1e] p-6 rounded-xl border border-[#0be1af] hover:shadow-lg hover:scale-105 transition-all duration-300 w-80">
+      <img src="https://cdn.dribbble.com/users/1770299/screenshots/16896152/media/4f23a17f3037f816312a3ce36a4efb7b.png" class="rounded-lg mb-4" alt="E-commerce Project" />
+      <h3 class="text-xl font-bold text-[#0be1af]">School Activities E-commerce</h3>
+      <p class="text-sm text-gray-300">Developed front end, backend, Render, Postman</p>
+    </a>
+
+    <!-- Project Card 2 -->
+    <a href="https://plantpalace-copy.vercel.app" target="_blank"
+       class="group bg-[#0a1c1e] p-6 rounded-xl border border-[#0be1af] hover:shadow-lg hover:scale-105 transition-all duration-300 w-80">
+      <img src="https://cdn.dribbble.com/users/1361284/screenshots/16041373/media/e0fe612e42c8dd1609ed86fa395e5c79.jpg" class="rounded-lg mb-4" alt="Plant Palace" />
+      <h3 class="text-xl font-bold text-[#0be1af]">Plant Palace</h3>
+      <p class="text-sm text-gray-300">Built with Tailwind, backend, product showcase</p>
+    </a>
+
+    <!-- Project Card 3 -->
+    <a href="https://osamataskin.github.io/CMS_System1/" target="_blank"
+       class="group bg-[#0a1c1e] p-6 rounded-xl border border-[#0be1af] hover:shadow-lg hover:scale-105 transition-all duration-300 w-80">
+      <img src="https://cdn.dribbble.com/users/324248/screenshots/14509564/media/02f2f9a01cf2c1a6827e7df7e3f46944.jpg" class="rounded-lg mb-4" alt="CMS System" />
+      <h3 class="text-xl font-bold text-[#0be1af]">Complaint Management System</h3>
+      <p class="text-sm text-gray-300">Beta prototype using vanilla HTML/CSS</p>
+    </a>
+
+    <!-- Project Card 4 -->
+    <a href="https://github.com/shahiralashin/crm-app" target="_blank"
+       class="group bg-[#0a1c1e] p-6 rounded-xl border border-[#0be1af] hover:shadow-lg hover:scale-105 transition-all duration-300 w-80">
+      <img src="https://cdn.dribbble.com/users/2339561/screenshots/15466711/media/3e97cb73365a4eb5f84290e888b061db.jpg" class="rounded-lg mb-4" alt="CRM System" />
+      <h3 class="text-xl font-bold text-[#0be1af]">Lume - CRM System</h3>
+      <p class="text-sm text-gray-300">Client management tool</p>
+    </a>
+
+  </div>
+</section>
+
+
+<div class="divider flex items-center justify-center my-4 px-10"></div>
+
+<!-- CERTIFICATES -->
+<section id="certificates" class="h-screen w-screen px-10 py-20 text-center">
+  <h2 class="text-3xl font-bold mb-6">Certificates</h2>
+  <div class="flex flex-wrap justify-center gap-6 text-[#0be1af]">
+    <div class="border border-[#0be1af] p-4 rounded w-60">CCNA</div>
+    <div class="border border-[#0be1af] p-4 rounded w-60">ICDL Arabia</div>
+    <div class="border border-[#0be1af] p-4 rounded w-60">PMP</div>
+    <div class="border border-[#0be1af] p-4 rounded w-60">Web Development Award</div>
+    <div class="border border-[#0be1af] p-4 rounded w-60 flex flex-col items-center">
+      Best Character Student
+      <img src="https://upload.wikimedia.org/wikipedia/en/e/e0/Middlesex_University_Crest.png" class="h-10 mt-2" />
+    </div>
+  </div>
+</section>
+
+<div class="divider flex items-center justify-center my-4 px-10"></div>
+
+<!-- CONTACT -->
+<section id="contact" class="h-screen w-screen flex items-center justify-center px-10 text-center">
+  <form action="mailto:youremail@example.com" method="POST" class="bg-[#0a1c1e] p-8 rounded shadow-md space-y-6">
+    <h2 class="text-2xl font-bold text-white">Get in Touch</h2>
+    <input type="text" name="name" placeholder="Your Name" required class="w-full px-4 py-2 rounded text-black" />
+    <input type="email" name="email" placeholder="Your Email" required class="w-full px-4 py-2 rounded text-black" />
+    <textarea name="message" rows="4" placeholder="Your Message" class="w-full px-4 py-2 rounded text-black" required></textarea>
+    <button type="submit" class="border border-[#0be1af] px-5 py-2 text-[#0be1af] rounded hover:bg-[#0be1af] hover:text-black transition-all">
+      &lt; Hire Me /&gt;
+    </button>
+  </form>
+</section>
+
+<script>
+  const navToggle = document.getElementById('nav-toggle');
+  const navMenu = document.getElementById('nav-menu');
+  const navClose = document.getElementById('nav-close');
+
+  navToggle.addEventListener('click', () => {
+    navMenu.classList.remove('-translate-x-full');
+  });
+
+  navClose.addEventListener('click', () => {
+    navMenu.classList.add('-translate-x-full');
+  });
+
+  function closeNav() {
+    navMenu.classList.add('-translate-x-full');
+  }
+</script>
+
+       
